@@ -1,0 +1,14 @@
+{
+  "https://example.com/site1": {
+    "keyword1": 0,
+    "keyword2": 0,
+    "keyword3": 0,
+    "keyword4": 0
+  },
+  "https://example.com/site2": {
+    "keyword1": 0,
+    "keyword2": 0,
+    "keyword3": 0,
+    "keyword4": 0
+  }
+}
