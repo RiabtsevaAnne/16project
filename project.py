@@ -10,12 +10,12 @@ def count(url):
 
     words = soup.get_text().split()
 
-    word_frequency = {}
+    word = {}
     for word in words:
         word = word.lower()  
-        word_frequency[word] = word_frequency.get(word, 0) + 1
+        word[word] = word.get(word, 0) + 1
 
-    return word_frequency
+    return word
 
 def main():
     sites = ['https://example.com/site1', 'https://example.com/site2']
@@ -24,11 +24,11 @@ def main():
     results = {}
 
     for site in sites:
-        site_results = {}
+        results = {}
         for keyword in keywords:
             keyword_frequency = count(site)
-            site_results[keyword] = keyword_frequency.get(keyword, 0)
-        results[site] = site_results
+            results[keyword] = keyword_frequency.get(keyword, 0)
+        results[site] = results
 
     with open('results.json', 'w') as f:
         json.dump(results, f, indent=2)

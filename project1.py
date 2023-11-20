@@ -29,9 +29,9 @@ def images(site_url, folder_path):
 
         soup = BeautifulSoup(content, 'html.parser')
 
-        img_tags = soup.find_all('img')
+        tags = soup.find_all('img')
 
-        for img_tag in img_tags:
+        for img_tag in tags:
             img_url = urljoin(site_url, img_tag['src'])
             image(img_url, folder_path)
 
